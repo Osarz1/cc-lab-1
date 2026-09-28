@@ -60,7 +60,7 @@ tar -czf "/tmp/${ARCHIVE_NAME}" -C "${PROJECT_DIR}" backup
 mv "/tmp/${ARCHIVE_NAME}" "${PROJECT_DIR}/backup/${ARCHIVE_NAME}"
 
 echo "Logging completion message..."
-echo "Assignment tasks completed successfully on $(date)" > "${PROJECT_DIR}/README.md"
+echo "Assignment completed on $(date)" > "${PROJECT_DIR}/README.md"
 
 echo "Verifying final directory state..."
 if [ -d "${PROJECT_DIR}/data" ]; then
