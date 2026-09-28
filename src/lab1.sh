@@ -56,7 +56,7 @@ ps aux | grep -i "[b]ash"
 
 echo "Creating a compressed archive of the 'backup' directory..."
 ARCHIVE_NAME="backup_$(date +%Y%m%d).tar.gz"
-tar -czf "${PROJECT_DIR}/backup/${ARCHIVE_NAME}" -C "${PROJECT_DIR}" backup
+tar -czf "${PROJECT_DIR}/backup/${ARCHIVE_NAME}" -C "${PROJECT_DIR}" --exclude="${ARCHIVE_NAME}" backup
 
 echo "Logging completion message..."
 echo "Assignment tasks completed successfully on $(date)" > "${PROJECT_DIR}/README.md"
